@@ -1,0 +1,19 @@
+{
+  "name": "okta",
+  "version": "1.0.0",
+  "description": "okta & firebase integration",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently \"nodemon app.js\" \"cd ui & npm start \""
+  },
+  "author": "seven-deuce",
+  "license": "ISC",
+  "dependencies": {
+    "@okta/jwt-verifier": "^2.3.0",
+    "concurrently": "^6.2.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "firebase-admin": "^9.11.0"
+  }
+}

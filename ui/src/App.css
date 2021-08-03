@@ -1,0 +1,105 @@
+/*spinner css */
+.lds-ring {
+    display: block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 1em auto;
+}
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: var(--svg) transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/**************end*/
+:root {
+    --shadow: #292524;
+    --midtone: #0f4d8a;
+    --highlight: #88601f;
+    --accent: #7d122c;
+    --svg: #6b6867;
+    --lightgray: #d4d4d4;
+    --pastel1: #cf9aa7;
+    --pastel2: #ebecaa;
+    --pastel3: #f5f6d5;
+    --minHeight1: 600px;
+}
+body {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, serif;
+}
+
+button {
+    background-color: var(--accent);
+    padding: 0.5em;
+    min-width: 200px;
+    max-width: 500px;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: inherit;
+    -webkit-transition: all 200ms;
+    -o-transition: all 200ms;
+    transition: all 200ms;
+    cursor: pointer;
+}
+
+button:hover,
+button:active,
+a.button-like:hover,
+a.button-like:active {
+    opacity: 0.8;
+}
+
+.App {
+    margin: 2em;
+}
+
+.menu {
+    display: flex;
+    gap: 1em;
+    align-content: center;
+    margin-bottom: 2em;
+}
+.menu a {
+    display: block;
+    width: 200px;
+    text-align: center;
+    background-color: var(--pastel2);
+    font-size: 1.5em;
+    padding: 0.5em 1em;
+    color: var(--shadow);
+    border-radius: 3px;
+}
+.menu a.active {
+    text-decoration: none;
+    cursor: default;
+    background-color: var(--pastel3);
+}
