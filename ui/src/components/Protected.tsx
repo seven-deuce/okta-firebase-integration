@@ -22,7 +22,7 @@ const Protected = () => {
         oktaAuth.tokenManager
             .get("idToken")
             .then(({ claims }: { claims: ProfileObject }) => {
-                const selectedProfileData: Record<string, string | number> = Object.entries(claims).reduce((accumulator: ProfileObject, current) => {
+                const selectedProfileData = Object.entries(claims).reduce((accumulator: ProfileObject, current) => {
                     if (!filedsToExclude.includes(current[0])) {
                         accumulator[current[0]] = current[1]
                     }
@@ -47,7 +47,7 @@ const Protected = () => {
         )
     return (
         <div>
-            You are NOT authorized to visit this page. <Link to="/">Click here to log in</Link>{" "}
+            You are NOT authorized to visit this page. <Link to="/">Click here to log in</Link>
         </div>
     )
 }

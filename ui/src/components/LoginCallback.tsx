@@ -20,7 +20,7 @@ const LoginCallback = () => {
                 const oktaTokenResponse = await oktaAuth.token.parseFromUrl()
                 const accessToken = oktaTokenResponse.tokens.accessToken?.accessToken    
                 
-                oktaTokenResponse!.tokens!.idToken && oktaAuth.tokenManager.add("idToken", oktaTokenResponse!.tokens!.idToken )
+                oktaTokenResponse!.tokens!.idToken && oktaAuth.tokenManager.add("idToken", oktaTokenResponse.tokens.idToken )
          
                 // Use the access token to call the firebaseCustomToken endpoint.
                 const firebaseTokenResponse = await fetch(FIREBASE_ENDPOINT , {

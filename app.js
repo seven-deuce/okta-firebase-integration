@@ -14,7 +14,7 @@ app.use(cors({ origin: /localhost:3000/i }))
 // This endpoint uses the `oktaAuth` middleware defined above to
 // ensure requests have a valid Okta access token.
 
-app.get("/firebaseCustomToken", oktaAuth, async (req, res) => {
+app.get("/firebase-custom-token", oktaAuth, async (req, res) => {
     const oktaUid = req.jwt.claims.uid
 
     try {
